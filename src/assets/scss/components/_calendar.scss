@@ -1,0 +1,79 @@
+.calendar {
+  @include border-box;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $slateGray;
+    padding:0.3rem 1rem;
+    background-color: lighten($dolphinGray, 10);;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+    button {
+      @include base-btn;
+      @media screen and (min-width:$laptop){
+        font-size: 1.5rem;  
+    }
+    }
+    &__current {
+      text-align: center;
+      &__month {
+        font-size: 1.1rem;
+        letter-spacing: .1rem;
+        font-weight: 600;
+      }
+      &__year {
+        font-size: .8rem;
+      }
+    }
+  }
+  &__table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: .9rem;
+    border-radius: .2rem;
+    thead {
+      height: 1.5rem;
+      background-color: $headerGray;
+      border: .1rem solid $headerGray;
+      th:last-child {
+        color: $red;
+      }
+    }
+    tbody {
+      tr {
+        height: 2.5rem;
+        border-bottom: .1rem solid $frogGray;
+        &:last-child {
+          border-bottom: 0;
+        }
+        @media screen and (min-width:$laptop){
+          height: 1.9rem;
+        }
+        td {
+          width: 14.28%;
+          border-right: .1rem solid $frogGray;
+          border-radius: .2rem;
+          &:hover {
+            background-color: $frogGray;
+          }
+          &:last-child {
+            border: 0;
+            color: $red;
+          }
+        }
+        .current {
+          background-color: $blueTr;
+          &:hover {
+            background-color: $blue;
+          }
+        }
+        .empty {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+

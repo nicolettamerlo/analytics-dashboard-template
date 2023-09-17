@@ -1,0 +1,103 @@
+@import '_variables';
+@import '_mixins';
+
+// Global layout
+@import '_layout';
+@import '_topbar';
+@import '_sidebar';
+@import '_main';
+@import '_footer';
+@import '_pages';
+
+// components
+@import 'components/card';
+@import 'components/_target';
+@import 'components/_calendar';
+@import 'components/_tasks';
+@import 'components/_table';
+@import 'components/_messaging';
+@import 'components/_board';
+@import 'components/_charts';
+@import 'components/_scrollbar';
+
+
+html {
+    // font-size: 1rem;
+    font-size: 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $frogGray;
+    font-family: 'Montserrat', sans-serif;
+    color: $slateGray;
+    font-weight: 500;
+    .no-scroll {
+        overflow: hidden;
+        @media screen and (min-width:$laptopLarge){
+            overflow: auto;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+    ul {
+        list-style-type:none;
+        padding: 0;
+        margin: 0;
+    }
+    button {
+        font-family: 'Montserrat', sans-serif; 
+    }
+    h1 {
+        letter-spacing: .1rem;
+        color: $slateGray;
+        font-weight: 500;
+    }
+    h2 {
+        margin-bottom: 0;
+        margin-top: 3.5rem;
+        color: $sharkGray;
+        font-weight: 500;
+    }
+    h3 {
+        font-weight: 500;
+        font-size: .9rem;
+        letter-spacing: .1rem;
+        color: $slateGray;
+        padding: 0 .5rem;
+    }
+    .logo {
+        &__img {
+            width: 1.3rem;
+            height: 1.3rem;
+            transform: translateY(.2rem);
+        }
+        &__text {
+            color: $logoLight;
+            font-weight: 600;
+        }
+    }
+    .menu-link {
+        &-active {
+            pointer-events: none;
+            a {color: darken($dolphinGray, 15);}
+        }
+    }
+    .green-link {
+        color: $logoLight;
+        &:hover {
+            color: $logoDark;
+        }
+    }
+}
+
+

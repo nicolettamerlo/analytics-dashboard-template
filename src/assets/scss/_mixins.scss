@@ -1,0 +1,65 @@
+@mixin border-box {
+  background-color: $light;
+  border-radius: $borderRadius;
+  box-shadow: .2rem .2rem 1rem $sharkGray;
+}
+@mixin icon-btn {
+  color: $slateGray;
+  font-size: 1.2rem;
+  text-shadow: .1rem .1rem .1rem $dolphinGray;
+  background-color: transparent;
+  border: 0;
+  &:hover {
+    color: $lightSlateGray;
+    transform: scale(1.1);
+    text-shadow: .1rem .1rem .1rem $frogGray;
+  }
+  @media screen and (min-width:$laptop){
+    font-size: .8rem;
+  }
+}
+@mixin base-btn {
+  margin-left: .4rem;
+  color: $light;
+  background-color: $sharkGray;
+  width: 1.8rem;
+  height: 1.5rem;
+  border-radius: .3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:.1rem solid $sharkGray;
+  border-bottom: .1rem solid darken($sharkGray, 10);
+  border-right: .1rem solid darken($sharkGray, 10);
+  &:hover {
+    color: white;
+    transform: scale(1.1);
+    border-bottom: .1rem solid $sharkGray;
+    border-right: .1rem solid $sharkGray;
+    background-color: darken($sharkGray, 5);
+  }
+  @media screen and (min-width:$laptop){
+    @include icon-btn;
+    margin-left: 0;
+    &:hover {
+      border: 0;
+      background-color: transparent;
+    }
+  }
+}
+@mixin all-btn {
+  border: 0;
+  background-color: transparent;
+  padding: 0 .3rem;
+  color: darken($blue, 15);
+  font-weight: 500;
+  &:hover {
+    color: $blue;
+    transform: scale(1.03);
+  }
+}
+@mixin position-center {
+  display: flex;
+  justify-content: center;       
+  align-items: center;
+}

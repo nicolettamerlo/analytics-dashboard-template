@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card__header">
+        <div class="card__header__title">
+            <i class="fa-solid fa-credit-card"></i><span>Expenses</span>
+        </div>
+    <button class="fa-solid fa-arrow-up-right-from-square"></button> 
+    </div>
+    <div class="card__summary">
+        <div class="card__summary__value">$2.778.524</div>
+        <div class="card__summary__description">overall expenses</div>
+    </div>
+    <div class="card__trends">
+        <div class="card__trends__month">
+         Monthly Trend:<span class="card__trends__month__selected"><span class="current-month"></span> <span class="current-year"></span></span><button class="fa-solid fa-caret-down"></button>
+        </div>
+        <div class="chart">
+            <div class="chart__legend">
+                <ul class="chart__legend__list" id="expenses-legend"></ul>
+            </div>
+            <div class="chart__container chart__container-expenses">
+                <canvas id="expenses"></canvas>
+            </div>             
+        </div>
+    </div>
+    <div class="card__footer">
+        <span><i class="fa fa-caret-up"></i> 2%</span>
+        <span><i class="fa-solid fa-plus"></i> $276.098</span>
+    </div>
+</div>

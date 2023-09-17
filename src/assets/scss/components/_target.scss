@@ -1,0 +1,80 @@
+.target {
+  position: relative;
+    @include border-box;
+    border: .1rem solid $frogGray;
+    max-width: 28rem;
+    left: 50%;
+    transform: translateX(-50%);
+    @media screen and (min-width:$tablet){
+      max-width: unset;
+    }
+    &__title {
+      font-size: .9rem;
+      text-align: left;
+      height: 1.6rem;
+      color: $slateGray;
+      letter-spacing: .1rem;
+      font-weight: 500;
+      padding-left: 2rem;
+      padding-top: .5rem;
+      border-top-left-radius: .2rem;
+      border-top-right-radius: .2rem;
+      @media screen and (min-width:$laptop){
+        font-size: .8rem;
+      }
+    }
+    &__percentage {
+      position: absolute;
+      padding-top: .5rem;
+      background-color: $light;
+      color: $slateGray;
+      border: .1rem solid $frogGray;
+      box-shadow: .1rem .2rem .4rem lighten($slateGray, 5);
+      font-size: .9rem;
+      font-weight: 500;
+      border-radius: .4rem;
+      height: 2.3rem;
+      width: 2.8rem;
+      top:-1.5rem;
+      right: 2rem;
+      @media screen and (min-width:$tablet){
+        font-weight: 600;
+        top:-1.1rem;
+        right: 1.1rem;
+        font-size: .8rem;
+        height: 2.1rem;
+        width: 2.5rem;
+      }
+    }
+    &__wrap {
+      border-radius: .3rem;
+      padding: 1rem 4rem;
+      &__bar {
+        width: 100%;
+        height: .8rem;
+        background-color: lighten($frogGray, 28);
+        border-radius: .4rem;
+        overflow: hidden;
+        box-shadow: .1rem .1rem .1rem $dolphinGray;
+        &__inside {
+          background-color: $frogGray;
+          height: 100%;
+          font-size: .7rem;
+          font-weight: 600;
+          animation:animateleft 0.5s
+        }
+        @keyframes animateleft{from{left:-2.5rem;opacity:0} to{left:0;opacity:1}}
+      }
+    }
+    &__footer {
+      padding: .6rem .6rem;
+      font-size: .8rem;
+      border-top: 1px solid $dolphinGray;
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+      @media screen and (min-width:$laptop){
+        padding: .4rem 3rem;
+      }
+    }
+}
