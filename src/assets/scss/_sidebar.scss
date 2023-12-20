@@ -19,14 +19,14 @@
     }
     &__logo {
         @include position-center;
+        
         border-bottom: .1rem solid $frogGray;
         height: $topbarHeight;
         margin-bottom: .8rem;
-        img {
-            color: $green;
-            height: 1.5rem;
-            width: 1.5rem;
-            margin-right: .2rem;
+        .logo {
+            .logo__img {
+                margin-right: .8rem;
+            }
         }
     }
     &__user {

@@ -11,7 +11,7 @@ import sarah from '../img/sarah-forrester.jpg';
 import serena from '../img/serena-johnson.jpg';
 import picPlaceholder from '../img/pic-placeholder.png';
 // Icons and logo
-import logo from '../img/logo.png';
+import logo from '../img/logo.svg';
 import webpackLogo from '../img/webpack.png';
 import javascriptLogo from '../img/javascript.png';
 import chartjsLogo from '../img/chartjs.svg';

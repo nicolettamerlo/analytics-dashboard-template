@@ -46,6 +46,9 @@ const config = {
       template: './src/about.hbs',
       filename: 'about.html'
     }),
+    new HtmlWebpackPlugin({
+      favicon: "./src/img/logo.svg"
+    })
     // new CopyPlugin({
     //   patterns: [
     //     { from: "src/assets/img", to: "assets/img" },
