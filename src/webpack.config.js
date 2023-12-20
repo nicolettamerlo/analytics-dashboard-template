@@ -47,7 +47,7 @@ const config = {
       filename: 'about.html'
     }),
     new HtmlWebpackPlugin({
-      favicon: "./src/img/logo.svg"
+      favicon: "./src/img/favicon.ico"
     })
     // new CopyPlugin({
     //   patterns: [
